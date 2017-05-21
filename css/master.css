@@ -1,0 +1,140 @@
+* {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 200;
+}
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+
+/* input boxes begin */
+
+input[type="text"] {
+  background-color: rgb(250, 255, 189);
+}
+
+.outline {
+  padding: .5em .75em;
+  width: 30%;
+  display: inline-block;
+  font-size: 1.25em;
+  font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;
+  font-weight: 700;
+  border: 0.25em solid #eee;
+  border-radius: 0.5em;
+  color: rgb(0, 0, 0);
+}
+
+input[type="text"]:focus {
+  border-color: #09f;
+}
+
+input[type="text"]:focus.no-outline {
+  outline: 0;
+}
+
+/* input boxes end */
+
+
+/* button begins */
+
+.btn {
+  padding: 1em 1.5em;
+  background-color: #F012BE;
+  color: #FFF;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 6px #F012BE;
+}
+
+.btn:active {
+  box-shadow: 0px 0px 0px 2px #fff;
+  color: rgb(250, 255, 189);
+}
+
+/* button ends */
+
+
+/* transition begins */
+
+.container {
+  width: 285px;
+  height: 420px;
+  margin: 0 auto;
+}
+
+.ball-container {
+  position: relative;
+  background-image: url(../images/basketball.png);
+  width: 285px;
+  height: 285px;
+  top: 0px;
+  animation: ball-float linear 3s infinite;
+}
+
+@keyframes ball-float {
+  50% {
+    top: 100px
+  }
+  /* can you use to and from */
+  100% {
+    top: 0px
+  }
+  /* or use 50% or 100% */
+}
+
+.shadow {
+  position: relative;
+  height: 16px;
+  background: #999;
+  opacity: 0.3;
+  border-radius: 100%;
+  margin: 0;
+  top: 100px;
+  animation: shadow-react linear 3s infinite;
+}
+
+@keyframes shadow-react {
+  50% {
+    margin: 0px 20% 0px 20%;
+    opacity: 0.7;
+  }
+  100% {
+    margin: 0px 0px 0px 0px;
+    opacity: 0.1;
+  }
+}
+
+
+/* transition ends */
+
+
+/* Media queries for mobile */
+
+@media only screen and (max-width: 850px) {
+  .outline {
+    font-size: 1em;
+    width: 60%
+  }
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .outline {
+    font-size: 1em;
+    padding: .5em .75em;
+    width: 75%;
+  }
+  .wrapper {
+    width: 100%;
+  }
+}
